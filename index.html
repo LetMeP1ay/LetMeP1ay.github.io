@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="info" id="info">
+        <h1 class="certplace">Получите сертификат Испытателя Микроскопа</h1>
+        <p class="downloadprep">Чтобы скачать копию сертификата, заполните, пожалуйста, поле ниже</p>
+        
+        <div class="form">
+            <input type="text" id="studentName" onfocus="updateLabel()" onblur="labelChecker()">
+            <label id="label" for="studentName">Имя и фамилия</label>
+            <button id="get" onclick="loadingScreen()">Получить сертификат</button>
+        </div>
+        
+        <p class="confidentiality">Заполняя эти данные, вы соглашаетесь с нашей политикой конфиденциальности</p>
+    </div>
+
+    <div class="loading" id="loading">
+        <h1 class="certplace">Получите сертификат Испытателя Микроскопа</h1>
+        <div id="loading-bar">
+            <div id="loading-bar-fill"></div>
+        </div>
+        <p class="wait">Подождите... <br> Ваш сертификат скоро будет готов</p>
+    </div>
+
+    <div class="ready" id="ready">
+        <h1 class="certplace">Получите сертификат Испытателя Микроскопа</h1>
+        <h1 class="rdy">ГОТОВО!</h1>
+        <p class="downloadtext">Нажмите на кнопку, чтобы загрузить готовый сертификат</p>
+        <button id="download" onclick="downloadPNG()">Скачать сертификат</button>
+        <canvas width="595" height="842" id="canvas"></canvas>
+    </div>
+</body>
+</html>

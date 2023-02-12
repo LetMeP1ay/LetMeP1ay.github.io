@@ -1,0 +1,612 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
+
+body {
+    background-color: #04324A;
+}
+
+.certplace {/* Получите сертификат Испытателя Микроскопа */
+
+    position: absolute;
+    width: 381px;
+    height: 72px;
+    left: calc(50% - 381px/2);
+    top: 150px;
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    /* or 150% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #CDD3A7;
+    
+    
+}
+
+.downloadprep {
+
+    position: absolute;
+    width: 337px;
+    height: 81px;
+    left: calc(50% - 337px/2);
+    top: 252px;
+    
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 27px;
+    /* or 150% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    
+}
+
+.form {
+    position: relative;
+}
+
+label {
+/* Имя и фамилия */
+
+position: absolute;
+width: 200.16px;
+height: 50px;
+top: 378px;
+left: calc(50% - 200.16px/2 - 58.15px);
+
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 60px;
+/* or 375% */
+display: flex;
+align-items: center;
+user-select: none;
+transition: 0.5s;
+color: #DEF1FF;
+
+}
+
+input {
+/* Rectangle 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 350px;
+top: 378px;
+height: 50px;
+left: calc(50% - 350px/2 + 0.5px);
+
+border: 2px solid #DEF1FF;
+border-radius: 10px;
+background-color:#04324A;
+padding:10px;
+padding-top:30px;
+color: #e3f1fa;
+transition: 0.2s;
+
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #BCA2D1;
+    transition: 0.2s;
+}
+
+.ready,.loading {
+    display:none;
+}
+
+button {
+   /* Rectangle 3 */
+
+position: absolute;
+width: 350px;
+height: 49.17px;
+left: calc(50% - 350px/2 + 0.5px);
+top: 448.83px;
+
+background: #BCA2D1;
+border-radius: 10px;
+
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+/* or 375% */
+color: #04324A;
+border: 0px;
+
+}
+
+#info {
+    visibility:visible;
+}
+
+button:hover {
+    cursor:pointer;
+    background: #ccb5de;
+}
+
+#get {
+    z-index:1;
+}
+
+.confidentiality {
+
+position: absolute;
+width: 312px;
+height: 40px;
+left: calc(50% - 312px/2 + 0.5px);
+top: 528px;
+
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+/* or 125% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: rgba(255, 255, 255, 0.5);
+
+
+}
+
+.wait {
+position: absolute;
+width: 304px;
+height: 54px;
+left: calc(50% - 304px/2 + 0.5px);
+top: 252px;
+
+font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 27px;
+/* or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+#loading-bar {
+    position:absolute;
+    top: 400px;
+    height:20px;
+    width:99%;
+    background-color: #04324A;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #DEF1FF;
+}
+
+#loading-bar-fill {
+    z-index: 1;
+    top: 400px;
+    height:100%;
+    width:0%;
+    background-color: #DEF1FF;
+    animation: loading-bar 3.5s linear;
+}
+
+@keyframes loading-bar {
+    from {
+        width:0%;
+    }
+    to {
+        width:100%;
+    }
+}
+
+.rdy {
+
+position: absolute;
+width: 143px;
+height: 40px;
+left: calc(50% - 143px/2);
+top: 248px;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #DEF1FF;
+
+
+}
+
+#canvas {
+    display:none;
+}
+
+.downloadtext {
+
+position: absolute;
+width: 304px;
+height: 54px;
+left: calc(50% - 304px/2 + 0.5px);
+top: 312px;
+
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .certplace {
+        position: absolute;
+        width: 624px;
+        height: 120px;
+        left: calc(50% - 624px/2 + 2px);
+        top: 120px;
+        
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        /* or 150% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #CDD3A7;
+    }
+
+
+
+
+    .downloadprep {
+        position: absolute;
+        width: 656px;
+        height: 80px;
+        left: calc(50% - 656px/2 + 2px);
+        top: 268px;
+        
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 40px;
+        /* or 167% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+        
+    }
+
+
+    .confidentiality {
+
+        position: absolute;
+        width: 530px;
+        height: 40px;
+        left: calc(50% - 530px/2 + 2px);
+        top: 598px;
+        
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 125% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+
+
+
+    label {
+
+        position: absolute;
+        width: 303.1px;
+        height: 59px;
+        left: calc(50% - 303.1px/2 - 86.81px);
+        top: 418px;
+
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 60px;
+        /* or 375% */
+        display: flex;
+        align-items: center;
+
+        color: #DEF1FF;
+    }
+
+
+
+    input {
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 530px;
+        height: 59px;
+        left: calc(50% - 530px/2 + 2px);
+        top: 418px;
+        
+        border: 2px solid #DEF1FF;
+        border-radius: 10px;
+        
+    }
+
+
+    button {
+        position: absolute;
+        width: 530px;
+        height: 59px;
+        left: calc(50% - 530px/2 + 2px);
+        top: 509px;
+        background: #BCA2D1;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 60px;
+        align-items: center;
+        text-align: center;
+        
+        color: #04324A;
+    }
+
+
+    .wait {
+        position: absolute;
+        width: 656px;
+        height: 80px;
+        left: calc(60% - 656px/2 + 2px);
+        top: 278px;
+        
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 40px;
+        /* or 125% */
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+        
+    }
+
+
+
+    #loading-bar {
+        position: absolute;
+        top:500px;
+    }
+
+    .downloadtext {
+    position: absolute;
+    width: 656px;
+    height: 40px;
+    left: calc(55% - 656px/2);
+    top: 354px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 40px;
+    /* identical to box height, or 167% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    label {
+        position: absolute;
+        width: 283.66px;
+        height: 59px;
+        left: calc(50% - 283.66px/2 - 360.75px);
+        top: 420px;
+        
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 60px;
+        /* or 250% */
+        display: flex;
+        align-items: center;
+        
+        color: #DEF1FF;
+        
+    }
+
+    input {
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 496px;
+        height: 59px;
+        left: calc(50% - 496px/2 - 287px);
+        top: 420px;
+        
+        border: 2px solid #DEF1FF;
+        border-radius: 10px;    
+    }
+
+
+
+    button {
+
+        position: absolute;
+        width: 530px;
+        height: 59px;
+        left: calc(50% - 530px/2 + 270px);
+        top: 420px;
+        
+        background: #BCA2D1;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 60px;
+        /* identical to box height, or 375% */
+        align-items: center;
+        text-align: center;
+
+        color: #04324A;
+
+
+    }
+    .confidentiality {
+
+        position: absolute;
+        width: 1073px;
+        height: 20px;
+        left: calc(65% - 1073px/2 - 1.5px);
+        top: 519px;
+
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.5);
+
+
+    }
+
+    .wait {
+
+        position: absolute;
+        width: 656px;
+        height: 80px;
+        left: calc(55% - 656px/2);
+        top: 289px;
+
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 40px;
+        /* or 125% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+
+
+    }
+
+    .downloadtext {
+
+        position: absolute;
+        width: 656px;
+        height: 40px;
+        left: calc(50% - 656px/2);
+        top: 354px;
+
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 40px;
+        /* identical to box height, or 167% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+
+
+    }
+    #download {
+        /* button */
+
+        position: absolute;
+        width: 530px;
+        height: 60px;
+        left: 375px;
+        top: 453px;
+
+
+
+        /* Rectangle 3 */
+
+        position: absolute;
+        width: 530px;
+        height: 59px;
+        left: calc(50% - 530px/2);
+        top: 454px;
+
+        background: #BCA2D1;
+        border-radius: 10px;
+
+
+        /* Скачать сертификат */
+
+        position: absolute;
+        width: 530px;
+        height: 60px;
+        left: calc(50% - 530px/2);
+        top: 453px;
+
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 60px;
+        /* identical to box height, or 375% */
+        align-items: center;
+        text-align: center;
+
+        color: #04324A;
+
+
+    }
+}
