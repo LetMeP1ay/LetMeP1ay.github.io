@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    cursor: url(http://www.rw-designer.com/cursor-view/130861.png), auto;
+    cursor: url(https://cdn.custom-cursor.com/db/5522/32/colour-yards-soft-cyan-cursor.png), auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -138,7 +138,7 @@ border: 0px;
 }
 
 button:hover {
-    cursor: url(http://www.rw-designer.com/cursor-view/130875.png), pointer;
+    cursor:url(https://cdn.custom-cursor.com/db/5521/32/colour-yards-soft-cyan-pointer.png), pointer;
     background: #ccb5de;
 }
 
