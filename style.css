@@ -175,7 +175,6 @@ height: 54px;
 left: calc(50% - 304px/2 + 0.5px);
 top: 252px;
 
-font-family: 'Ubuntu';
 font-style: normal;
 font-weight: 300;
 font-size: 18px;
@@ -271,8 +270,6 @@ color: #FFFFFF;
         height: 120px;
         left: calc(50% - 624px/2 + 2px);
         top: 120px;
-        
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 700;
         font-size: 40px;
@@ -294,8 +291,6 @@ color: #FFFFFF;
         height: 80px;
         left: calc(50% - 656px/2 + 2px);
         top: 268px;
-        
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 24px;
@@ -317,8 +312,6 @@ color: #FFFFFF;
         height: 40px;
         left: calc(50% - 530px/2 + 2px);
         top: 598px;
-        
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
@@ -341,8 +334,6 @@ color: #FFFFFF;
         height: 59px;
         left: calc(50% - 303.1px/2 - 86.81px);
         top: 418px;
-
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
@@ -396,8 +387,6 @@ color: #FFFFFF;
         height: 80px;
         left: calc(60% - 656px/2 + 2px);
         top: 278px;
-        
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 32px;
@@ -447,8 +436,6 @@ color: #FFFFFF;
         height: 59px;
         left: calc(50% - 283.66px/2 - 360.75px);
         top: 420px;
-        
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 24px;
@@ -505,8 +492,6 @@ color: #FFFFFF;
         height: 20px;
         left: calc(65% - 1073px/2 - 1.5px);
         top: 519px;
-
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
@@ -528,8 +513,6 @@ color: #FFFFFF;
         height: 80px;
         left: calc(55% - 656px/2);
         top: 289px;
-
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 32px;
@@ -551,8 +534,6 @@ color: #FFFFFF;
         height: 40px;
         left: calc(50% - 656px/2);
         top: 354px;
-
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 300;
         font-size: 24px;
@@ -596,8 +577,6 @@ color: #FFFFFF;
         height: 60px;
         left: calc(50% - 530px/2);
         top: 453px;
-
-        font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
