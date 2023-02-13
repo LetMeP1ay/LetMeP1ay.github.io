@@ -91,11 +91,11 @@ width: 350px;
 top: 378px;
 height: 50px;
 left: calc(50% - 350px/2 + 0.5px);
-
+font-size: 18px;
 border: 2px solid #DEF1FF;
 border-radius: 10px;
 background-color:#04324A;
-padding:10px;
+padding:13px;
 padding-top:30px;
 color: #e3f1fa;
 transition: 0.2s;
@@ -172,7 +172,7 @@ color: rgba(255, 255, 255, 0.5);
 position: absolute;
 width: 304px;
 height: 54px;
-left: calc(50% - 304px/2 + 0.5px);
+left: calc(54% - 304px/2 + 0.5px);
 top: 252px;
 
 font-style: normal;
@@ -355,7 +355,7 @@ color: #FFFFFF;
         height: 59px;
         left: calc(50% - 530px/2 + 2px);
         top: 418px;
-        
+        padding-left:21px;
         border: 2px solid #DEF1FF;
         border-radius: 10px;
         
@@ -428,7 +428,7 @@ color: #FFFFFF;
 
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
 
     label {
         position: absolute;
@@ -450,19 +450,18 @@ color: #FFFFFF;
 
     input {
         box-sizing: border-box;
-
+        font-size:30px;
         position: absolute;
         width: 496px;
         height: 59px;
         left: calc(50% - 496px/2 - 287px);
         top: 420px;
+        padding-left: 29px;
         
         border: 2px solid #DEF1FF;
         border-radius: 10px;    
     }
-
-
-
+    
     button {
 
         position: absolute;
@@ -511,7 +510,7 @@ color: #FFFFFF;
         position: absolute;
         width: 656px;
         height: 80px;
-        left: calc(55% - 656px/2);
+        left: calc(56% - 656px/2);
         top: 289px;
         font-style: normal;
         font-weight: 300;
@@ -532,7 +531,7 @@ color: #FFFFFF;
         position: absolute;
         width: 656px;
         height: 40px;
-        left: calc(50% - 656px/2);
+        left: calc(52% - 656px/2);
         top: 354px;
         font-style: normal;
         font-weight: 300;
