@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    cursor: url(https://cdn.custom-cursor.com/db/5522/32/colour-yards-soft-cyan-cursor.png), auto;
+    cursor: url(cursor.png), auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -108,6 +108,8 @@ input:focus {
     transition: 0.2s;
 }
 
+
+
 .ready,.loading {
     display:none;
 }
@@ -138,12 +140,20 @@ border: 0px;
 }
 
 button:hover {
-    cursor:url(https://cdn.custom-cursor.com/db/5521/32/colour-yards-soft-cyan-pointer.png), pointer;
+    cursor:url(pointer.png), pointer;
     background: #ccb5de;
 }
 
 #get {
     z-index:1;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a:hover {
+    cursor:url(pointer.png), pointer;
 }
 
 .confidentiality {
@@ -159,7 +169,7 @@ font-weight: 300;
 font-size: 16px;
 line-height: 20px;
 /* or 125% */
-display: flex;
+display:inline-block;
 align-items: center;
 text-align: center;
 
@@ -189,14 +199,18 @@ color: #FFFFFF;
 }
 
 #loading-bar {
-    position:absolute;
-    top: 400px;
-    height:20px;
-    width:99%;
-    background-color: #04324A;
-    border-radius: 10px;
-    overflow: hidden;
+
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 350px;
+    height: 15px;
+    left: calc(50% - 350px/2 + 0.5px);
+    top: 438px;
+    
     border: 2px solid #DEF1FF;
+    border-radius: 10px;
+    
 }
 
 #loading-bar-fill {
@@ -206,6 +220,7 @@ color: #FFFFFF;
     width:0%;
     background-color: #DEF1FF;
     animation: loading-bar 3.5s linear;
+    border-radius: 8px;
 }
 
 @keyframes loading-bar {
@@ -282,7 +297,19 @@ color: #FFFFFF;
         color: #CDD3A7;
     }
 
+    #loading-bar {
 
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 656px;
+        height: 27px;
+        left: calc(50% - 656px/2);
+        top: 448px;
+
+        border-radius: 10px;
+
+    }
 
 
     .downloadprep {
@@ -317,7 +344,7 @@ color: #FFFFFF;
         font-size: 16px;
         line-height: 20px;
         /* or 125% */
-        display: flex;
+        display: inline-block;
         align-items: center;
         text-align: center;
         
@@ -446,6 +473,21 @@ color: #FFFFFF;
         
         color: #DEF1FF;
         
+    }
+
+    #loading-bar {
+        /* Rectangle 1 */
+
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 1073px;
+        height: 27px;
+        left: calc(50% - 1073px/2 + 0.5px);
+        top: 459px;
+
+        border-radius: 10px;
+
     }
 
     input {
