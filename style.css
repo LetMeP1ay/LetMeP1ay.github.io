@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    cursor: url(cursor.png), auto;
+    cursor: auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -137,7 +137,7 @@ border: 0px;
 }
 
 button:hover {
-    cursor:url(pointer.png), pointer;
+    cursor: pointer;
     background: #ccb5de;
 }
 
@@ -150,7 +150,7 @@ a {
 }
 
 a:hover {
-    cursor:url(pointer.png), pointer;
+    cursor: pointer;
 }
 
 .confidentiality {
