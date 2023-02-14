@@ -24,7 +24,6 @@ body {
     font-size: 24px;
     line-height: 36px;
     /* or 150% */
-    display: flex;
     align-items: center;
     text-align: center;
     
@@ -46,7 +45,6 @@ body {
     font-size: 18px;
     line-height: 27px;
     /* or 150% */
-    display: flex;
     align-items: center;
     text-align: center;
     
@@ -73,7 +71,6 @@ font-weight: 300;
 font-size: 16px;
 line-height: 60px;
 /* or 375% */
-display: flex;
 align-items: center;
 user-select: none;
 transition: 0.5s;
@@ -192,7 +189,6 @@ font-weight: 300;
 font-size: 18px;
 line-height: 27px;
 /* or 150% */
-display: flex;
 align-items: center;
 text-align: center;
 
@@ -247,7 +243,6 @@ font-style: normal;
 font-weight: 700;
 font-size: 32px;
 line-height: 40px;
-display: flex;
 align-items: center;
 text-align: center;
 color: #DEF1FF;
@@ -271,7 +266,6 @@ font-style: normal;
 font-weight: 300;
 font-size: 18px;
 line-height: 27px;
-display: flex;
 align-items: center;
 text-align: center;
 
@@ -294,7 +288,6 @@ color: #FFFFFF;
         font-size: 40px;
         line-height: 60px;
         /* or 150% */
-        display: flex;
         align-items: center;
         text-align: center;
         
@@ -327,7 +320,6 @@ color: #FFFFFF;
         font-size: 24px;
         line-height: 40px;
         /* or 167% */
-        display: flex;
         align-items: center;
         text-align: center;
         
@@ -370,7 +362,6 @@ color: #FFFFFF;
         font-size: 16px;
         line-height: 60px;
         /* or 375% */
-        display: flex;
         align-items: center;
 
         color: #DEF1FF;
@@ -416,7 +407,7 @@ color: #FFFFFF;
         position: absolute;
         width: 656px;
         height: 80px;
-        left: calc(60% - 656px/2 + 2px);
+        left: calc(50% - 656px/2 + 2px);
         top: 278px;
         font-style: normal;
         font-weight: 300;
@@ -441,14 +432,13 @@ color: #FFFFFF;
     position: absolute;
     width: 656px;
     height: 40px;
-    left: calc(55% - 656px/2);
+    left: calc(50% - 656px/2);
     top: 354px;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 40px;
     /* identical to box height, or 167% */
-    display: flex;
     align-items: center;
     text-align: center;
 
@@ -459,7 +449,7 @@ color: #FFFFFF;
 
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1080px) {
 
     label {
         position: absolute;
@@ -535,14 +525,13 @@ color: #FFFFFF;
         position: absolute;
         width: 1073px;
         height: 20px;
-        left: calc(65% - 1073px/2 - 1.5px);
+        left: calc(50% - 1073px/2 - 1.5px);
         top: 519px;
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
         line-height: 20px;
         /* identical to box height, or 125% */
-        display: flex;
         align-items: center;
         text-align: center;
 
@@ -552,18 +541,17 @@ color: #FFFFFF;
     }
 
     .wait {
-
+        
         position: absolute;
         width: 656px;
         height: 80px;
-        left: calc(56% - 656px/2);
+        left: calc(50% - 656px/2 + 1px);
         top: 289px;
         font-style: normal;
         font-weight: 300;
         font-size: 32px;
         line-height: 40px;
         /* or 125% */
-        display: flex;
         align-items: center;
         text-align: center;
 
@@ -577,14 +565,13 @@ color: #FFFFFF;
         position: absolute;
         width: 656px;
         height: 40px;
-        left: calc(52% - 656px/2);
+        left: calc(50% - 656px/2);
         top: 354px;
         font-style: normal;
         font-weight: 300;
         font-size: 24px;
         line-height: 40px;
         /* identical to box height, or 167% */
-        display: flex;
         align-items: center;
         text-align: center;
 
