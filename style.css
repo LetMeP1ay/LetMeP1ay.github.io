@@ -179,12 +179,15 @@ color: rgba(255, 255, 255, 0.5);
 }
 
 .wait {
+/* Подождите... Ваш сертификат скоро будет готов */
+
 position: absolute;
 width: 304px;
 height: 54px;
-left: calc(54% - 304px/2 + 0.5px);
+left: calc(50% - 304px/2 + 0.5px);
 top: 252px;
 
+font-family: 'Ubuntu';
 font-style: normal;
 font-weight: 300;
 font-size: 18px;
@@ -195,6 +198,8 @@ align-items: center;
 text-align: center;
 
 color: #FFFFFF;
+
+
 
 }
 
