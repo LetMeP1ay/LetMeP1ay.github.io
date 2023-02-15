@@ -5,11 +5,753 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        cursor: auto;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    
+    
+    body {
+        background-color: #04324A;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        width: 375px;
+        height: 812px;
+
+    }
+    
+    img {
+        display: none;
+    }
+
+    .certplace {/* Получите сертификат Испытателя Микроскопа */
+    
+        position: absolute;
+        width: 381px;
+        height: 72px;
+        left: calc(50% - 381px/2);
+        top: 150px;
+        
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        /* or 150% */
+        align-items: center;
+        text-align: center;
+        
+        color: #CDD3A7;
+        
+        
+    }
+    
+    .downloadprep {
+    
+        position: absolute;
+        width: 337px;
+        height: 81px;
+        left: calc(50% - 337px/2);
+        top: 252px;
+        
+        font-style: normal;
+        font-weight: 350;
+        font-size: 18px;
+        line-height: 27px;
+        /* or 150% */
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+        
+        
+    }
+    
+    .form {
+        position: relative;
+    }
+    
+    label {
+    /* Имя и фамилия */
+    
+    position: absolute;
+    width: 200.16px;
+    height: 50px;
+    top: 372px;
+    left: calc(50% - 200.16px/2 - 58.15px);
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 60px;
+    /* or 375% */
+    align-items: center;
+    user-select: none;
+    transition: 0.5s;
+    color: #DEF1FF;
+    
+    }
+    
+    input {
+    /* Rectangle 1 */
+    
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 350px;
+    top: 378px;
+    height: 50px;
+    left: calc(50% - 350px/2 + 0.5px);
+    font-size: 18px;
+    border: 2px solid #DEF1FF;
+    border-radius: 10px;
+    background-color:#04324A;
+    padding:13px;
+    padding-top:30px;
+    color: #e3f1fa;
+    transition: 0.2s;
+    
+    }
+    
+    input:focus {
+        outline: none;
+        border: 2px solid #BCA2D1;
+        transition: 0.2s;
+    }
+    
+    
+    
+    .ready,.loading {
+        display:none;
+    }
+    
+    button {
+       /* Rectangle 3 */
+    
+    position: absolute;
+    width: 350px;
+    height: 49.17px;
+    left: calc(50% - 350px/2 + 0.5px);
+    top: 448.83px;
+    
+    background: #BCA2D1;
+    border-radius: 10px;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    /* or 375% */
+    color: #04324A;
+    border: 0px;
+    
+    }
+    
+    #info {
+        visibility:visible;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background: #ccb5de;
+    }
+    
+    #get {
+        z-index:1;
+    }
+    
+    a {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    a:hover {
+        cursor: pointer;
+    }
+    
+    .confidentiality {
+    
+    position: absolute;
+    width: 312px;
+    height: 40px;
+    left: calc(50% - 312px/2 + 0.5px);
+    top: 528px;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+    display:inline-block;
+    align-items: center;
+    text-align: center;
+    
+    color: rgba(255, 255, 255, 0.5);
+    
+    
+    }
+    
+    .wait {
+    /* Подождите... Ваш сертификат скоро будет готов */
+    
+    position: absolute;
+    width: 304px;
+    height: 54px;
+    left: calc(50% - 304px/2 + 0.5px);
+    top: 252px;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    /* or 150% */
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    
+    
+    }
+    
+    #loading-bar {
+    
+        box-sizing: border-box;
+        
+        position: absolute;
+        width: 350px;
+        height: 15px;
+        left: calc(50% - 350px/2 + 0.5px);
+        top: 438px;
+        
+        border: 2px solid #DEF1FF;
+        border-radius: 10px;
+        
+    }
+    
+    #loading-bar-fill {
+        z-index: 1;
+        top: 400px;
+        height:100%;
+        width:0%;
+        background-color: #DEF1FF;
+        animation: loading-bar 3.5s linear;
+        border-radius: 8px;
+    }
+    
+    @keyframes loading-bar {
+        from {
+            width:0%;
+        }
+        to {
+            width:100%;
+        }
+    }
+    
+    .rdy {
+    
+    position: absolute;
+    width: 143px;
+    height: 40px;
+    left: calc(50% - 143px/2);
+    top: 248px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
+    color: #DEF1FF;
+    
+    
+    }
+    
+    #canvas {
+        display:none;
+    }
+    
+    .downloadtext {
+    
+    position: absolute;
+    width: 304px;
+    height: 54px;
+    left: calc(50% - 304px/2 + 0.5px);
+    top: 312px;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    
+    }
+    
+    @media screen and (min-width: 630px) {
+    
+        body {
+            position: absolute;
+            width: 834px;
+            height: 756px;
+            background: #04324A;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+        }
+    
+        .certplace {
+            position: absolute;
+            width: 624px;
+            height: 120px;
+            left: calc(50% - 624px/2 + 2px);
+            top: 120px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 60px;
+            /* or 150% */
+            align-items: center;
+            text-align: center;
+            
+            color: #CDD3A7;
+        }
+    
+        #loading-bar {
+    
+            box-sizing: border-box;
+    
+            position: absolute;
+            width: 656px;
+            height: 27px;
+            left: calc(50% - 656px/2);
+            top: 448px;
+    
+            border-radius: 10px;
+    
+        }
+    
+    
+        .downloadprep {
+            position: absolute;
+            width: 656px;
+            height: 80px;
+            left: calc(50% - 656px/2 + 2px);
+            top: 268px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 40px;
+            /* or 167% */
+            align-items: center;
+            text-align: center;
+            
+            color: #FFFFFF;
+            
+        }
+    
+    
+        .confidentiality {
+    
+            position: absolute;
+            width: 530px;
+            height: 40px;
+            left: calc(50% - 530px/2 + 2px);
+            top: 598px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            /* or 125% */
+            display: inline-block;
+            align-items: center;
+            text-align: center;
+            
+            color: rgba(255, 255, 255, 0.5);
+        }
+    
+    
+    
+    
+        label {
+    
+            position: absolute;
+            width: 303.1px;
+            height: 59px;
+            left: calc(50% - 303.1px/2 - 86.81px);
+            top: 418px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 60px;
+            /* or 375% */
+            align-items: center;
+    
+            color: #DEF1FF;
+        }
+    
+    
+    
+        input {
+            box-sizing: border-box;
+    
+            position: absolute;
+            width: 530px;
+            height: 59px;
+            left: calc(50% - 530px/2 + 2px);
+            top: 418px;
+            padding-left:21px;
+            border: 2px solid #DEF1FF;
+            border-radius: 10px;
+            
+        }
+    
+    
+        button {
+            position: absolute;
+            width: 530px;
+            height: 59px;
+            left: calc(50% - 530px/2 + 2px);
+            top: 509px;
+            background: #BCA2D1;
+            border-radius: 10px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 60px;
+            align-items: center;
+            text-align: center;
+            
+            color: #04324A;
+        }
+    
+    
+        .wait {
+            position: absolute;
+            width: 656px;
+            height: 80px;
+            left: calc(50% - 656px/2 + 2px);
+            top: 278px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            /* or 125% */
+            align-items: center;
+            text-align: center;
+            
+            color: #FFFFFF;
+            
+        }
+    
+    
+    
+        #loading-bar {
+            position: absolute;
+            top:500px;
+        }
+    
+        .downloadtext {
+        position: absolute;
+        width: 656px;
+        height: 40px;
+        left: calc(50% - 656px/2);
+        top: 354px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 40px;
+        /* identical to box height, or 167% */
+        align-items: center;
+        text-align: center;
+    
+        color: #FFFFFF;
+    
+    
+        }
+    
+    }
+    
+    @media screen and (min-width: 1080px) {
+    
+        body {
+            position: absolute;
+            width: 1280px;
+            height: 649px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        label {
+            position: absolute;
+            width: 283.66px;
+            height: 59px;
+            left: calc(50% - 283.66px/2 - 360.75px);
+            top: 420px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 60px;
+            /* or 250% */
+            align-items: center;
+            
+            color: #DEF1FF;
+            
+        }
+    
+        #loading-bar {
+            /* Rectangle 1 */
+    
+            box-sizing: border-box;
+    
+            position: absolute;
+            width: 1073px;
+            height: 27px;
+            left: calc(50% - 1073px/2 + 0.5px);
+            top: 459px;
+    
+            border-radius: 10px;
+    
+        }
+    
+        input {
+            box-sizing: border-box;
+            font-size:30px;
+            position: absolute;
+            width: 496px;
+            height: 59px;
+            left: calc(50% - 496px/2 - 287px);
+            top: 420px;
+            padding-left: 29px;
+            
+            border: 2px solid #DEF1FF;
+            border-radius: 10px;    
+        }
+        
+        button {
+    
+            position: absolute;
+            width: 530px;
+            height: 59px;
+            left: calc(50% - 530px/2 + 270px);
+            top: 420px;
+            
+            background: #BCA2D1;
+            border-radius: 10px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 60px;
+            /* identical to box height, or 375% */
+            align-items: center;
+            text-align: center;
+    
+            color: #04324A;
+    
+    
+        }
+        .confidentiality {
+    
+            position: absolute;
+            width: 1073px;
+            height: 20px;
+            left: calc(50% - 1073px/2 - 1.5px);
+            top: 519px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height, or 125% */
+            align-items: center;
+            text-align: center;
+    
+            color: rgba(255, 255, 255, 0.5);
+    
+    
+        }
+    
+        .wait {
+            
+            position: absolute;
+            width: 656px;
+            height: 80px;
+            left: calc(50% - 656px/2 + 1px);
+            top: 289px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            /* or 125% */
+            align-items: center;
+            text-align: center;
+    
+            color: #FFFFFF;
+    
+    
+        }
+    
+        .downloadtext {
+    
+            position: absolute;
+            width: 656px;
+            height: 40px;
+            left: calc(50% - 656px/2);
+            top: 354px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 40px;
+            /* identical to box height, or 167% */
+            align-items: center;
+            text-align: center;
+    
+            color: #FFFFFF;
+    
+    
+        }
+        #download {
+            /* button */
+    
+            position: absolute;
+            width: 530px;
+            height: 60px;
+            left: 375px;
+            top: 453px;
+    
+    
+    
+            /* Rectangle 3 */
+    
+            position: absolute;
+            width: 530px;
+            height: 59px;
+            left: calc(50% - 530px/2);
+            top: 454px;
+    
+            background: #BCA2D1;
+            border-radius: 10px;
+    
+    
+            /* Скачать сертификат */
+    
+            position: absolute;
+            width: 530px;
+            height: 60px;
+            left: calc(50% - 530px/2);
+            top: 453px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 60px;
+            /* identical to box height, or 375% */
+            align-items: center;
+            text-align: center;
+    
+            color: #04324A;
+    
+    
+        }
+    }</style>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        const image = new Image();
+        image.crossOrigin = "anonymous";
+        image.src = "https://static.tildacdn.com/tild6133-3462-4465-b435-643931653362/certificate.png";
+        image.onload = function() {
+            ctx.textAlign = "center";
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+            ctx.font = "30px Arial, sans-serif";
+            ctx.fillStyle = "white";
+            ctx.fillText(document.getElementById("studentName").innerHTML, canvas.width/2, 260);
+        }
+    });
+    
+    document.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            document.getElementById("get").click();
+        }
+    });
+    
+    function updateLabel() {
+        var studentName = document.getElementById("studentName");
+        var label = document.getElementById("label");
+        label.style.top = "362px";
+        label.style.fontSize = "12px";
+        if (window.innerWidth >= 768) {
+            label.style.top = "400px"
+        }
+    };
+    
+    function labelChecker() {
+        if (studentName.value.length > 0 ) {
+            if (window.innerWidth >= 768) {
+                label.style.top = "400px"
+            }
+            if(window.innerWidth < 768) {
+                label.style.top = "362px";
+                label.style.fontSize = "12px";
+            }
+        }
+        if (studentName.value.length === 0) {
+            label.style.top = "";
+            label.style.fontSize = "";
+        }
+    }
+    
+    function loadingScreen() {
+        if (studentName.value.length === 0) {
+            label.innerHTML = "Введите Ваше имя";
+            label.style.color = "red";
+        }
+    
+        if (studentName.value.length > 0) {
+            updateName();
+            const info = document.getElementById("info");
+            label.innerHTML = "Имя и фамилия";
+            label.style.color = "#DEF1FF";
+            const loading = document.getElementById("loading");
+            info.style.display = "none";
+            loading.style.display = "flex";
+            document.getElementById("loading-bar-fill").style.width = "100%";
+            setTimeout(function() {
+            const ready = document.getElementById("ready");
+            const loading = document.getElementById("loading");
+            loading.style.display = "none";
+            ready.style.display = "flex";
+            }, 4500);
+        }
+    }
+    
+    function updateName() {
+        studentName.value;
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        const image = new Image();
+        image.crossOrigin = "anonymous";
+        image.src = "https://static.tildacdn.com/tild6133-3462-4465-b435-643931653362/certificate.png";
+        image.onload = function() { 
+            ctx.textAlign = "center";
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+            ctx.font = "30px Arial, sans-serif";
+            ctx.fillStyle = "white";
+            ctx.fillText(studentName.value, canvas.width/2, 260);
+      };
+    };
+    function downloadPNG() {
+          console.log(5 + 5);
+          const link = document.createElement("a");
+          link.download = "сертификат.png";
+          link.href = canvas.toDataURL();
+          link.click();
+        };</script>
 </head>
 <body>
-
     <div class="info" id="info">
         <h1 class="certplace">Получите сертификат Испытателя Микроскопа</h1>
         <p class="downloadprep">Чтобы скачать копию сертификата, заполните, пожалуйста, поле ниже</p>
