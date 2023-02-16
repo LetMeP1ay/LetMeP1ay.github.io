@@ -705,12 +705,8 @@
     }
     
     const input = document.getElementById("studentName");
-    let scrollPosition = 0;
-    input.addEventListener("focus", () => {
-        scrollPosition.window.pageYOffset;
-    });
     input.addEventListener("blur", () => {
-        window.scrollTo(0, scrollPosition);
+        window.scrollTo(0,0);
     });
 
     function loadingScreen() {
