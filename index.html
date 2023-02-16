@@ -702,13 +702,8 @@
             label.style.top = "";
             label.style.fontSize = "";
         }
+        window.scrollTo(0,0);
     }
-    
-    const input = document.getElementById("studentName");
-
-    input.addEventListener("blur", () => {
-        window.scrollTo(0, -10);
-    });
     
     function loadingScreen() {
         if (studentName.value.length === 0) {
