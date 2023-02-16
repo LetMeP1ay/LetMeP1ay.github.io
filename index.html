@@ -710,21 +710,7 @@
     input.addEventListener("blur", () => {
         window.scrollTo(0, initialScrollPosition);
     });
-
-    let keyboardHeight = 0;
-
-    window.addEventListener('resize', () => {
-        const newKeyboardHeight = window.innerHeight - document.documentElement.clientHeight;
-
-        if (newKeyboardHeight > 0) {
-            keyboardHeight = newKeyboardHeight;
-        }
-        else {
-            keyboardHeight = 0;
-            window.scrollTo(0, initialScrollPosition);
-        }
-    });
-
+    
     function loadingScreen() {
         if (studentName.value.length === 0) {
             label.innerHTML = "Введите Ваше имя";
