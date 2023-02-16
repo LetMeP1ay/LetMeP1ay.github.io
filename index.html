@@ -705,10 +705,9 @@
     }
     
     const input = document.getElementById("studentName");
-    const initialScrollPosition = window.scrollY;
 
     input.addEventListener("blur", () => {
-        window.scrollTo(0, initialScrollPosition);
+        window.scrollTo(0, -10);
     });
     
     function loadingScreen() {
