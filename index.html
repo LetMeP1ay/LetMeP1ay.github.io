@@ -743,11 +743,20 @@
         image.crossOrigin = "anonymous";
         image.src = "https://static.tildacdn.com/tild6133-3462-4465-b435-643931653362/certificate.png";
         image.onload = function() { 
-            ctx.textAlign = "center";
-            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-            ctx.font = "30px Arial, sans-serif";
-            ctx.fillStyle = "white";
-            ctx.fillText(studentName.value, canvas.width/2, 260);
+            if (studentName.length <= 21) {
+                ctx.textAlign = "center";
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                ctx.font = "30px Arial, sans-serif";
+                ctx.fillStyle = "white";
+                ctx.fillText(studentName.value, canvas.width/2, 260);
+            }
+            else {
+                ctx.textAlign = "center";
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                ctx.font = "20px Arial, sans-serif";
+                ctx.fillStyle = "white";
+                ctx.fillText(studentName.value, canvas.width/2, 260);
+            }
       };
     };
     function downloadPNG() {
