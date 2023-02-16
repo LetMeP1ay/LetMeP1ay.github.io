@@ -704,6 +704,15 @@
         }
     }
     
+    const input = document.getElementById("studentName");
+    let scrollPosition = 0;
+    input.addEventListener("focus", () => {
+        scrollPosition.window.pageYOffset;
+    });
+    input.addEventListener("blur", () => {
+        window.scrollTo(0, scrollPosition);
+    });
+
     function loadingScreen() {
         if (studentName.value.length === 0) {
             label.innerHTML = "Введите Ваше имя";
